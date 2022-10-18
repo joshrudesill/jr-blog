@@ -11,7 +11,7 @@ const Post = ({ post }) => {
                         <p className="has-text-weight-light">{ post.date }</p>
                         <p className="is-italic">{ post.time }</p>
                         {
-                            post.textblocks.map(tb => <BlogPostSection textblock={tb} />)
+                            post.textblocks.map((tb, index) => <BlogPostSection key={index} textblock={tb} />)
                         }
                     </div>
                 </div>
@@ -25,7 +25,7 @@ const Post = ({ post }) => {
 export const getStaticPaths = async () => {
     const paths = posts.map(post => ({
         params: { id: post.id.toString() },
-      }))
+    }))
 
     return {
         paths,

@@ -1,3 +1,8 @@
+import React from "react";
+import Counter from "./counter";
+import Loader from "./funny-loader";
+import JewelLogo from "./jewellogo";
+import Search from "./search";
 
 
 
@@ -31,22 +36,22 @@ const BlogPostSection = ({ textblock }) => {
     if(type === 'code') {
         const { blocks } = textblock;
         return (
-            <p className="is-family-code">
+            <p className="is-family-code is-size-5">
                 { 
-                blocks.map(t => {
+                blocks.map((t, i) => {
                     if(t.indents > 0) {
                         return (
-                            <>
-                                <span>&nbsp;&nbsp;&nbsp;{t.text}</span><br/>
-                            </>
+                            <React.Fragment key={i}>
+                                <span >&nbsp;&nbsp;&nbsp;{ t.text }</span><br/>
+                            </React.Fragment>
                         )
                     }
                     return (
-                        <>
-                        <span>
-                            { t.text}
-                        </span><br/>
-                        </>
+                        <React.Fragment key={i}>
+                            <span>
+                                { t.text}
+                            </span><br/>
+                        </React.Fragment>
                         
                     )
                 }) 
@@ -62,6 +67,18 @@ const BlogPostSection = ({ textblock }) => {
             -{ author }
         </blockquote>
         )
+    }
+    if(type === 'cc1') {
+        return <Counter />
+    }
+    if(type === 'cc2') {
+        return <Loader />
+    }
+    if(type === 'cc3') {
+        return <Search />
+    }
+    if(type === 'cc4') {
+        return <JewelLogo />
     }
 }
 
