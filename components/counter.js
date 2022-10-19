@@ -7,7 +7,7 @@ const Counter = () => {
         <div className="card my-5">
             <div className="card-content">
                 <span className="tag is-info has-text-weight-bold is-size-5 mb-5">Count: {count}</span>
-                <div className="columns is-mobile">
+                <div className="columns">
                     <div className="column is-narrow">
                         <button className="button is-small is-primary" onClick={() => setCount(count + 1)}>Add 1!</button>
                     </div>
