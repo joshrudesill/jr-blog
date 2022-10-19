@@ -26,9 +26,6 @@ const Nav = () => {
                     <a className="navbar-item">
                         <span className="is-family-code">resume </span>
                     </a>
-                    <a className="navbar-item">
-                        <span className="is-family-code">contact </span>
-                    </a>
                 </div>
             </div>
         </div>
