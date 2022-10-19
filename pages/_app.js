@@ -3,9 +3,13 @@ import 'bulma'
 import Nav from '../components/nav'
 import Script from 'next/script'
 import Footer from '../components/footer'
+import Head from 'next/head'
 function MyApp({ Component, pageProps }) {
   return (
     <>
+    <Head>
+      <title>JRudesill Blog</title>
+    </Head>
     <Script strategy="afterInteractive" src={`https://www.googletagmanager.com/gtag/js?id=G-YSRHMFEJ17`} />
 
     <Script strategy="afterInteractive" id='gtag'>
