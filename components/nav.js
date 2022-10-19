@@ -20,10 +20,10 @@ const Nav = () => {
             </div>
             <div className="navbar-menu">
                 <div className="navbar-end">
-                    <a className="navbar-item">
+                    <a className="navbar-item" href="https://github.com/joshrudesill" rel="noreferrer" target='_blank'>
                         <span className="is-family-code">github </span>
                     </a>
-                    <a className="navbar-item">
+                    <a className="navbar-item" href="https://jrudesill.dev" rel="noreferrer" target='_blank'>
                         <span className="is-family-code">resume </span>
                     </a>
                 </div>

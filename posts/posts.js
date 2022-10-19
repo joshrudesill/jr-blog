@@ -263,8 +263,13 @@ export const posts = [
             },
             {
                 type: 'paragraph',
-                text: `The project is fully deployed on Vercel at jewel.jrudesill.dev`
+                text: `The project is fully deployed on Vercel at`
             },
+            {
+                type: 'link',
+                link: 'Jewel',
+                href: 'https://jewel.jrudesill.dev'
+            }
            
         ]  
     }
