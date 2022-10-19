@@ -8,11 +8,11 @@ export default function Home({ posts }) {
       <div className='columns mt-6'>
         <div className='column'>
           <div className='content p-3'>
-            <h4 className='is-family-code'>Hi, I am Josh Rudesill and I'm searching for my first web developer job</h4>
+            <h4 className='is-family-code'>Hi, I am Josh Rudesill and I&apos;m searching for my first web developer job</h4>
             <p className='is-italic'>This blog was created to document my journey from where I started to where I am now and also where I want to be in the future</p>
             <p>I am currently searching for a job in web development. You can read about my story here on this blog or you can see my resume (upper right) for more information about me.
             <br/>
-            You can get in contact with me at <span className='has-text-weight-semibold'>joshrudesill@gmail.com (preffered)</span> or at <span className='has-text-weight-semibold'>+1 (651) 491 5052</span> (I'm on WhatsApp too)
+            You can get in contact with me at <span className='has-text-weight-semibold'>joshrudesill@gmail.com (preffered)</span> or at <span className='has-text-weight-semibold'>+1 (651) 491 5052</span> (I&apos;m on WhatsApp too)
             </p>
           </div>
         </div>
