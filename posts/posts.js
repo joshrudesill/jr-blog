@@ -276,7 +276,7 @@ export const posts = [
     {
         id: 3,
         title: "How I use React",
-        description: `o get started I have to state that this article will be a time capsule for myself, but I thought it may be interesting to share. I want to explain how I use React and its tools at this point in my career. I haven’t worked professionally with it yet but I have a fair amount of experience under my belt from building Jewel and other smaller portfolio projects. I often think about whether what I’m writing is correct from a development team standpoint.`,
+        description: `To get started I have to state that this article will be a time capsule for myself, but I thought it may be interesting to share. I want to explain how I use React and its tools at this point in my career. I haven’t worked professionally with it yet but I have a fair amount of experience under my belt from building Jewel and other smaller portfolio projects. I often think about whether what I’m writing is correct from a development team standpoint.`,
         date: 'October 24, 2022',
         time: '5 min read',
         featured: false,
