@@ -272,6 +272,117 @@ export const posts = [
             }
            
         ]  
+    },
+    {
+        id: 3,
+        title: "How I use React",
+        description: `o get started I have to state that this article will be a time capsule for myself, but I thought it may be interesting to share. I want to explain how I use React and its tools at this point in my career. I haven’t worked professionally with it yet but I have a fair amount of experience under my belt from building Jewel and other smaller portfolio projects. I often think about whether what I’m writing is correct from a development team standpoint.`,
+        date: 'October 24, 2022',
+        time: '5 min read',
+        featured: false,
+        textblocks: [
+            {
+                type: 'paragraph',
+                text: `To get started I have to state that this article will be a time capsule for myself, but I thought it may be interesting to share. I want to explain how I use React and its tools at this point in my career. I haven’t worked professionally with it yet but I have a fair amount of experience under my belt from building Jewel and other smaller portfolio projects.`
+            },
+            {
+                type: 'paragraph',
+                text: `I often think about whether what I’m writing is correct from a development team standpoint. Would the code that I write be accepted? I think the answer most often is “sort of..”. On a component to component level, when basic state or basic logic is required I think I generally follow good practices, but once application architecture comes into play my lack of professional experience might become more evident. That’s not to say that what I build doesn’t work effectively,  but rather that there may be security flaws or inefficiencies that would require a more experienced set of eyes to notice.
+                `
+            },
+            {
+                type: 'specialstyle',
+                text: `Hooks`,
+                style: 'is-size-4 has-text-weight-light'
+            },
+            {
+                type: 'paragraph',
+                text: `Hooks are something that were new-ish when I first started using React, so I avoided them to learn the absolute basics first. Now they are essential in almost every component I build especially since most modern libraries use them for all their functionality.  I also find that once you know the rules they are very intuitive and easy to use. Again, once you know the rules. `
+            },
+            {
+                type: 'specialstyle',
+                text: `useState`,
+                style: 'is-size-5 has-text-weight-light'
+            },
+            {
+                type: 'code',
+                blocks: [
+                    {text: 'const [ interestingArticle, setInterestingArticle ] = useState(false);', indents:0}
+                ]
+            },
+            {
+                type: 'paragraph',
+                text: `Up to this point useState has been my bread and butter. Its implementation is easy and its behavior is very predictable. There isn’t too much else to add here that doesn’t involve other hooks so further discussion will be later..
+                `
+            },
+            {
+                type: 'paragraph',
+                text: `Reminder: if you use curly brackets to destructure useState it will not work and React won’t warn you that you set it up wrong. (heard from a friend -_-)`
+            },
+            {
+                type: 'specialstyle',
+                text: `useEffect`,
+                style: 'is-size-5 has-text-weight-light'
+            },
+            {
+                type: 'paragraph',
+                text: `I take back what I said about useState, it’s not my bread and butter. In reality, useState is more like my butter and useEffect is my bread, together they make a great breakfast. They are both useful when combined with other things as well like pasta or a sandwich but both inherently need to be combined with something else in order to be delicious. useEffect is by no means easy to use when you’re first getting started. It seems easy when trivial examples are presented to illustrate its purpose but there is a lot you can’t do with it. Its power lies in what it can do which for my purposes is: subscribe to variables. useEffect and useState are like a match made in heaven or kind of like bread and butter :). Did I mention they work well together? The most complex ways I use useEffect are as follows: I might have a useEffect statement with an empty second argument to set some initial state within my component. Then in the second useEffect statement I may add some form state or something which is “user-interactable” to the second argument which may do some logic after anything changes. Then if there happens to be a third useEffect it generally is some sort of fetch request or a call to a function which fetches something or does some async work somewhere else. All that being said, for sending async requests I generally prefer..`
+            },
+            {
+                type: 'specialstyle',
+                text: `Custom Hooks`,
+                style: 'is-size-5 has-text-weight-light'
+            },
+            {
+                type: 'paragraph',
+                text: `Although my experience building my own hooks is limited to my last project, I plan on doing it in every project I build from now on. In my last project I had a lot of async requests in a lot of different components and they all basically followed the same pattern. Because of that I wrote my first custom hook which I called useFetchManager. It bundled everything I needed from a request. Request state, errors, data returned from the request, etc. It all boiled down to mainly useState and useEffect. A custom hook in this instance solved two big headaches for me. The first is boilerplate work every time a simple request is needed. Rewriting or copying code all the time gets old and you can often stump yourself by missing the small bits. The second is the small bugs that can arise from those small bits that you missed or from different edge cases between components. A robust custom hook can solve both of those problems pretty effectively. I write in greater detail about this hook in my article on Jewel`
+            },
+            {
+                type: 'link',
+                href: 'https://blog.jrudesill.dev/posts/2',
+                link: 'Jewel Blog Post'
+            },
+            {
+                type: 'specialstyle',
+                text: `Next.js`,
+                style: 'is-size-4 has-text-weight-light'
+            },
+            {
+                type: 'paragraph',
+                text: `Next has been the most recent tool I’ve started using. It’s not a part of React per se but rather a very powerful extension of it. I used it for Jewel and I will be using it on my next few projects at least. It is very complex so I am just going to highlight some of the main features I find extremely useful or interesting`
+            },
+            {
+                type: 'specialstyle',
+                text: `Routing`,
+                style: 'is-size-5 has-text-weight-light'
+            },
+            {
+                type: 'paragraph',
+                text: `Routing is a huge part of any modern web app and Next takes a very intuitive approach to solving it. Using their folder structure and naming scheme reduces boilerplate work and makes complex routing very simple.`
+            },
+            {
+                type: 'specialstyle',
+                text: `API Routes`,
+                style: 'is-size-5 has-text-weight-light'
+            },
+            {
+                type: 'paragraph',
+                text: `The Next team has also reduced boilerplate work / project set up in regards to setting up a server. A Next app by default comes with a primitive node server already set up and running in the background. All you need to do is make a file in the api folder and you can write a request handler that works a lot like it would in express. I used API routes exclusively for the backend on Jewel and I will most likely continue on future projects.`
+            },
+            {
+                type: 'specialstyle',
+                text: `Static Site Generation (SSG)`,
+                style: 'is-size-5 has-text-weight-light'
+            },
+            {
+                type: 'paragraph',
+                text: `This last feature of Next I would like to highlight because it’s the last one I’ve learned / utilized. The blog you are currently on was built with static site generation. It’s a fantastic way to build a zippy static site. `
+            },
+            {
+                type: 'paragraph',
+                text: `My knowledge will only deepen from this point and looking back at this article will show me how far I’ve come. I can make things now that would have seemed impossible a year ago so I am excited to see where I am in a year from now or even five years from now.`
+            },
+        ]
     }
 ]
 

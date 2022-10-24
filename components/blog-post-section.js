@@ -68,6 +68,8 @@ const BlogPostSection = ({ textblock }) => {
         </blockquote>
         )
     }
+    
+    //Custom components
     if(type === 'cc1') {
         return <Counter />
     }

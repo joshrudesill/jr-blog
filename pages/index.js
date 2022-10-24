@@ -2,7 +2,7 @@ import { useRouter } from 'next/router';
 import { posts } from '../posts/posts';
 export default function Home({ posts }) {
   const router = useRouter()
-
+  
   return (
     <div className='container is-widescreen has-background-white'>
       <div className='columns mt-6'>
